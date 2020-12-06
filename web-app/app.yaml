@@ -1,0 +1,3 @@
+runtime: go113
+env_variables:
+ BUCKET: <<store_bucket>>

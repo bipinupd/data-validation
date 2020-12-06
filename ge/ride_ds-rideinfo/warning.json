@@ -1,0 +1,129 @@
+{
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "ride_ds-rideinfo.warning",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_column_count_to_equal",
+      "kwargs": {
+        "value": 18
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "VendorID",
+          "tpep_pickup_datetime",
+          "tpep_dropoff_datetime",
+          "passenger_count",
+          "trip_distance",
+          "RatecodeID",
+          "store_and_fwd_flag",
+          "PULocationID",
+          "DOLocationID",
+          "payment_type",
+          "fare_amount",
+          "extra",
+          "mta_tax",
+          "tip_amount",
+          "tolls_amount",
+          "improvement_surcharge",
+          "total_amount",
+          "congestion_surcharge"
+        ]
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "kwargs": {
+        "min_value": 1,
+        "max_value": 10000000
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "tpep_pickup_datetime"
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "tpep_dropoff_datetime"
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "trip_distance"
+      },
+      "meta": {
+        "BasicSuiteBuilderProfiler": {
+          "confidence": "very low"
+        }
+      }
+    }
+    ],
+  "meta": {
+    "BasicSuiteBuilderProfiler": {
+      "batch_kwargs": {
+        "bigquery_temp_table": "ride_information_temp",
+        "data_asset_name": "ride_information",
+        "datasource": "ride_db",
+        "limit": 1000,
+        "schema": null,
+        "table": "ride_information"
+      },
+      "created_at": 1705756034.0833359,
+      "created_by": "BasicSuiteBuilderProfiler"
+    },
+    "citations": [
+      {
+        "batch_kwargs": {
+          "bigquery_temp_table": "ride_information_temp",
+          "data_asset_name": "ride_information",
+          "datasource": "ride_db",
+          "table": "ride_information"
+        },
+        "batch_markers": {
+          "ge_load_time": "20201119T032015.425675Z"
+        },
+        "batch_parameters": null,
+        "citation_date": "20201119T032037.254681Z",
+        "comment": "BasicSuiteBuilderProfiler added a citation based on the current batch."
+      }
+    ],
+    "great_expectations_version": "0.12.9",
+    "notes": {
+      "content": [
+        "#### This is an _validation_ suite\n\n- This is **not a production suite**. It is meant to show examples of expectations.\n- Because this suite was auto-generated using a very basic profiler that does not know your data like you do, many of the expectations may not be meaningful.\n"
+      ],
+      "format": "markdown"
+    }
+  }
+}
