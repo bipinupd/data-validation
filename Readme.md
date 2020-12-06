@@ -82,7 +82,7 @@ gsutil cp -R ge/expectations/* gs://${STORE_BUCKET}/expectations/${BQ_DS}-ridein
 
 Lets Download a Yellow taxi data from the [link](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) and upload to RAW_BUCKET in the prefix inbox (`gsutil cp yellow_tripdata_2020-01.csv gs://${RAW_BUCKET}/inbox/`)
 
-![Workflow showing ETL process & service validation through App Engine](docs/dag.jpg)
+![DAG in Cloud Composer](docs/dag.jpg "DAG in Cloud Composer")
 
 Above is a DAG deployed in Cloud Composer. For this example, we have five expectations listed below. The screenshot below shows the output of the Great Expectation result.
 - expect_table_column_count_to_equal
@@ -92,7 +92,7 @@ Above is a DAG deployed in Cloud Composer. For this example, we have five expect
 - expect_column_values_to_not_be_null [column: tpep_dropoff_datetime]
 - expect_column_values_to_not_be_null [column: trip_distance]
 
-![Workflow showing ETL process & service validation through App Engine](docs/ge-screenshot.jpg)
+![Data validation in Great Expectations](docs/ge-screenshot.jpg "Data validation in Great Expectations")
 
 References:
 - Getting started with Great Expectations, https://docs.greatexpectations.io/en/latest/guides/tutorials/getting_started.html#tutorials-getting-started
