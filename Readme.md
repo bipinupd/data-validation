@@ -48,7 +48,7 @@ Enable IAP and give access to the users (role: IAP-secured Web App User) who nee
 
 #### Deploying DAG in Composer
 
-We use Airflow [variables](https://airflow.apache.org/cli.html#variables) to set the variables such as gcp_project, raw_bucket, archive_bucket, site_bucket, store_bucket using the following command.
+Install python dependencies in the `airflow/requirements.txt` in Cloud Composer. We use Airflow [variables](https://airflow.apache.org/cli.html#variables) to set the variables such as gcp_project, raw_bucket, archive_bucket, site_bucket, store_bucket using the following command.
 
 ```
 gcloud composer environments run ${COMPOSER_ENV} \
